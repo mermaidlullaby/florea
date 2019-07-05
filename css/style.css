@@ -70,6 +70,7 @@ p {
 	color:#7d8e3d;
 	padding:10px;
 	transition-duration: 0.3s;
+	text-decoration:none;
 }
 
 
@@ -90,6 +91,7 @@ p {
 	font-family: 'Cabin', sans-serif;
 	font-weight:bold;
 	font-size:24px;
+	text-decoration:none;
 }
 
 .bestelknop a:hover {
@@ -349,12 +351,12 @@ footer table {
 	margin:auto;
 }
 
-footer a, a:link {
+footer a:not(.button), footer a:link:not(.button) {
 	color:#f9ffb2;
 	text-decoration:none;
 }
 
-footer a:hover {
+footer a:hover:not(.button) {
 	color:#ab3e5b;
 }
 
