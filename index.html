@@ -1,1 +1,291 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Florea</title>
+		<meta name="description" content="">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<meta name="author" content="">
+		<meta name="web_author" content="">
+		<meta name="copyright" content="">
+		<meta name="rating" content="">
+		<meta name="reply-to" content="">		
+		<meta property="og:title" content="">
+		<meta property="og:site_name" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="">		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@">
+		<meta name="twitter:image:alt" content="">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Cabin|Dancing+Script|Open+Sans&display=swap" rel="stylesheet">
+		<script src="https://kit.fontawesome.com/0972224cc4.js"></script>
+		<script>
+		window.onscroll = function() {scrollFunction()};
 
+		function scrollFunction() {
+		  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+			document.getElementById("logo").style.height = "68px";
+			document.getElementById("logo").style.width = "164px";
+			document.getElementById("keurmerk").style.height = "70px";
+			document.getElementById("keurmerk").style.width = "70px";
+			document.getElementById("flexheader").style.height = "90px";
+			document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
+			document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
+			document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
+			var x = document.getElementsByClassName("flexnav");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			x[i].style.fontSize = "22px";
+			x[i].style.padding = "5px";
+			x[i].style.transition = "font-size 0.5s ease-in-out";
+			}
+		  } else {
+			document.getElementById("logo").style.height = "135px";
+			document.getElementById("logo").style.width = "327px";
+			document.getElementById("keurmerk").style.height = "140px";
+			document.getElementById("keurmerk").style.width = "140px";
+			document.getElementById("flexheader").style.height = "160px";
+			var x = document.getElementsByClassName("flexnav");
+			var i;
+			for (i = 0; i < x.length; i++) {
+			x[i].style.fontSize = "30px";
+			x[i].style.padding = "15px";
+			}
+		  }
+		}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<header id="flexheader">
+				<img src="./images/logo.png" alt="Florea Logo" id="logo">
+				<nav id="flexnav">
+					<ol>
+						<li class="flexnav"><a href="#">Home</a></li>
+						<li class="flexnav"><a href="#">Boeketten</a></li>
+						<li class="flexnav"><a href="#">Bloemstukken</a></li>
+						<li class="flexnav"><a href="#">Rouwbloemwerk</a></li>
+						<li class="flexnav"><a href="#">Workshops</a></li>
+						<li class="flexnav"><a href="#">Bezorgen</a></li>
+						<li class="flexnav"><a href="#">Webshop</a></li>
+						<li class="flexnav"><a href="#">Contact</a></li>
+					</ol>
+				</nav>
+				<img src="./images/keurmerk.png" alt="Dutch Florist Keurmerk" id="keurmerk">
+			</header>
+			<!-- Parallax -->
+			<div class="parallax" id="img1">
+			</div>
+			<!-- Content -->
+			<main>
+				<section id="mainbox">
+					<h1>Welkom bij Florea</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<h2>Florea Highlights</h2>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/EBml76U9Prs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</section>
+				<section id="webshopfront">
+					<h2>Standaard seizoens selecties</h2>
+					<p>Ieder seizoen biedt Florea een standaard selectie boeketten aan die makkelijk en snel te bestellen zijn, zonder poespas! Deze boeketten zijn enorm populair en daarom zorgen wij dat wij altijd de juiste bloemen in huis hebben.</p>
+					<p>Als u op werkdagen vóór 11:00 besteld, bezorgen wij vóór 17:00!</p>
+					<p>Als u op werkdagen vóór 16:00 besteld, bezorgen wij de volgende dag!</p>
+						<div id="webshopgrid">
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-1.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-2.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-3.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-4.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<!--  ^ 4 producten -->
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-5.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-6.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-7.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-8.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+								</div>
+							</article>
+						</div>
+						<!--  ^ 4 producten -->						
+					<p><a href="#" class="button">Bekijk al onze aanbiedingen</a></p>
+				</section>
+			</main>			
+			<!-- Parallax -->
+			<div class="parallax" id="img2">
+			</div>
+			<section class="didyouknow">
+				<button class="slider-button left" onclick="plusDivs(-1)">&#60;</button>
+				<button class="slider-button right" onclick="plusDivs(1)">&#62;</button>
+				<div class="slides">
+					<div id="wjd1">
+					</div>
+					<h2>Wist je dat...</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>		
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+				</div>
+				<div class="slides">
+					<div id="wjd2">
+					</div>
+					<h2>Wist je dat...</h2>
+					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+					<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+				</div>
+				<div class="slides">
+					<div id="wjd3">
+					</div>
+					<h2>Wist je dat...</h2>
+					<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. </p>
+				</div>
+			</section>
+			<!-- Parallax -->
+			<div class="parallax" id="img3">
+			</div>
+			<!-- Workshops -->
+			<section>
+				<div id="workshop">
+					<div id="workshopcontent">
+						<h3>Workshops</h3>
+						<p>Tijdens de periode</p>
+						<p class="datehighlight">1 juni - 31 augustus</p>
+						<p>hebben wij workshops voor bloemschikken. Meldt u nu aan om mee te doen!</p>
+						<p><a href="#" class="button">Aanmelden</a></p>
+					</div>
+					<div>
+						<img src="./images/workshopimg.jpg" alt="">
+					</div>
+				</div>
+			</section>
+			<!-- Parallax -->
+			<div class="parallax" id="img4">
+			</div>
+			<!-- Footer -->
+			<footer>
+				<section>
+					<h3>Contactgegevens</h3>
+					<address>
+						<p>Ruys de Beerenbroucklaan 29</p>
+						<p>6417 CC Heerlen<p>
+						<p><a href="tel:088-7795850">+31 (0)88 779 5850</a></p>
+						<p><a href="mailto:florea@reacollege.eu">florea@reacollege.eu</a></p>
+						<p><a href="#" class="button">Neem contact op</a></p>
+					</address>
+				</section>
+				<section id="socialmedia">
+					<h3>Social Media</h3>
+					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
+				</section>
+				<section>
+					<h3>Openingstijden</h3>
+						<table>
+							<tr>
+								<td>
+									<p>Ma-Wo:</p>
+								</td>
+								<td>
+									<p>08:00 - 17:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Do:</p>
+								</td>
+								<td>
+									<p>08:00 - 20:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Vr-Za:</p>
+								</td>
+								<td>
+									<p>08:00 - 17:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Zo:</p>
+								</td>
+								<td>
+									<p>12:00 - 16:00</p>
+								</td>
+							</tr>
+						</table>
+				</section>
+			</footer>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("slides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+				x[slideIndex-1].style.display = "block";
+			}
+		</script>
+	</body>
+</html>
