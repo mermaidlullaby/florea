@@ -22,60 +22,80 @@
 		<meta name="twitter:image:alt" content="">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Cabin|Dancing+Script|Open+Sans&display=swap" rel="stylesheet">
-		<script src="https://kit.fontawesome.com/0972224cc4.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/0972224cc4.js"></script>		
 		<script>
-		window.onscroll = function() {scrollFunction()};
+		window.onscroll = function() {
+			if (window.innerWidth > 1200) scrollFunction()
+		};
 
 		function scrollFunction() {
-		  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-			document.getElementById("logo").style.height = "68px";
-			document.getElementById("logo").style.width = "164px";
-			document.getElementById("keurmerk").style.height = "70px";
-			document.getElementById("keurmerk").style.width = "70px";
-			document.getElementById("flexheader").style.height = "90px";
-			document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
-			document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
-			document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
-			var x = document.getElementsByClassName("flexnav");
-			var i;
-			for (i = 0; i < x.length; i++) {
-			x[i].style.fontSize = "22px";
-			x[i].style.padding = "5px";
-			x[i].style.transition = "font-size 0.5s ease-in-out";
+			  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+				document.getElementById("logo").style.height = "68px";
+				document.getElementById("logo").style.width = "164px";
+				document.getElementById("keurmerk").style.height = "70px";
+				document.getElementById("keurmerk").style.width = "70px";
+				document.getElementById("flexheader").style.height = "90px";
+				document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "22px";
+				x[i].style.padding = "5px";
+				x[i].style.transition = "font-size 0.5s ease-in-out";
+				}
+			  } else {
+				document.getElementById("logo").style.height = "135px";
+				document.getElementById("logo").style.width = "327px";
+				document.getElementById("keurmerk").style.height = "140px";
+				document.getElementById("keurmerk").style.width = "140px";
+				document.getElementById("flexheader").style.height = "160px";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "30px";
+				x[i].style.padding = "15px";
+				}
+			  }
+		}
+	
+		
+		function myFunction() {
+			var x = document.getElementById("topnav");
+			if (x.className === "flexnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "flexnav";
 			}
-		  } else {
-			document.getElementById("logo").style.height = "135px";
-			document.getElementById("logo").style.width = "327px";
-			document.getElementById("keurmerk").style.height = "140px";
-			document.getElementById("keurmerk").style.width = "140px";
-			document.getElementById("flexheader").style.height = "160px";
-			var x = document.getElementsByClassName("flexnav");
-			var i;
-			for (i = 0; i < x.length; i++) {
-			x[i].style.fontSize = "30px";
-			x[i].style.padding = "15px";
-			}
-		  }
 		}
 		</script>
 	</head>
 	<body>
 		<div id="container">
 			<header id="flexheader">
-				<img src="./images/logo.png" alt="Florea Logo" id="logo">
-				<nav id="flexnav">
-					<ol>
-						<li class="flexnav"><a href="#">Home</a></li>
-						<li class="flexnav"><a href="#">Boeketten</a></li>
-						<li class="flexnav"><a href="#">Bloemstukken</a></li>
-						<li class="flexnav"><a href="#">Rouwbloemwerk</a></li>
-						<li class="flexnav"><a href="#">Workshops</a></li>
-						<li class="flexnav"><a href="#">Bezorgen</a></li>
-						<li class="flexnav"><a href="#">Webshop</a></li>
-						<li class="flexnav"><a href="#">Contact</a></li>
-					</ol>
-				</nav>
-				<img src="./images/keurmerk.png" alt="Dutch Florist Keurmerk" id="keurmerk">
+				<div id="fleximg">
+					<img src="./images/logo.png" alt="Florea Logo" id="logo">
+				</div>
+				<div id="flexnav">
+					<p id="nav-menu"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> Menu</a></p>
+					<nav id="topnav" class="flexnav">
+						<ol>
+							<li><a class="navlink" href="#">Home</a></li>
+							<li><a class="navlink" href="#">Boeketten</a></li>
+							<li><a class="navlink" href="#">Bloemstukken</a></li>
+							<li><a class="navlink" href="#">Rouwbloemwerk</a></li>
+							<li><a class="navlink" href="#">Workshops</a></li>
+							<li><a class="navlink" href="#">Bezorgen</a></li>
+							<li><a class="navlink" href="#">Webshop</a></li>
+							<li><a class="navlink" href="#">Contact</a></li>
+						</ol>
+					</nav>
+				</div>
+				<div id="flexkeurmerk">
+					<img src="./images/keurmerk.png" alt="Dutch Florist Keurmerk" id="keurmerk">
+				</div>
 			</header>
 			<!-- Parallax -->
 			<div class="parallax" id="img1">
@@ -84,9 +104,9 @@
 			<main>
 				<section id="mainbox">
 					<h1>Welkom bij Florea</h1>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					<h2>Florea Highlights</h2>
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/EBml76U9Prs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe class="youtubevid" src="https://www.youtube.com/embed/EBml76U9Prs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</section>
 				<section id="webshopfront">
 					<h2>Standaard seizoens selecties</h2>
@@ -96,34 +116,34 @@
 						<div id="webshopgrid">
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-1.jpg" alt="">
+									<img itemprop="image" src="./images/product-1.jpg" alt="Vol boeket met vrolijke felle kleuren: blauw, licht blauw, roze, rood, geel, paars en oranje">
 									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen, perfect als bedankje of gewoon zomaar.</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="24.95">24,95</span></a></p>
+								</div>
+							</article>
+							<article>
+								<div class="product" itemscope itemtype="http://schema.org/Product">
+									<img itemprop="image" src="./images/product-2.jpg" alt="Fleurijke boeket met voornamelijk roze, gele, en lichtblauwe bloemen, met veel groen.">
+									<h1 itemprop="name">Pluk de dag</h1>
+									<p itemprop="description">Een mooi gevarieerd boeket met exotisch ogende bloemen, perfect voor een speciaal iemand in jouw leven.</p>
 									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-2.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<img itemprop="image" src="./images/product-3.jpg" alt="Vol boeket met veel zonnebloemen en groen.">
+									<h1 itemprop="name">Zonnetje in Huis</h1>
+									<p itemprop="description">Vrolijk geel met zonnebloemen en veel groen, dit boeket fleurt elke kamer direct op!</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="20.00">20,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-3.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
-								</div>
-							</article>
-							<article>
-								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-4.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<img itemprop="image" src="./images/product-4.jpg" alt="Vol boeket met voornamelijk roze, rode en gele bloemen.">
+									<h1 itemprop="name">Zomerkriebels</h1>
+									<p itemprop="description">Om verliefd op te worden, dit boeket geeft vrolijke kriebels en laat zien dat je iemand heel erg waardeerd.</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="30.00">30,-</span></a></p>
 								</div>
 							</article>
 							<!--  ^ 4 producten -->
@@ -198,14 +218,15 @@
 			<section>
 				<div id="workshop">
 					<div id="workshopcontent">
-						<h3>Workshops</h3>
+						<h3>Zomer Workshop</h3>
 						<p>Tijdens de periode</p>
 						<p class="datehighlight">1 juni - 31 augustus</p>
-						<p>hebben wij workshops voor bloemschikken. Meldt u nu aan om mee te doen!</p>
+						<p>hebben wij workshops voor bloemschikken met mooie zomerse bloemen. Via deze workshop werken wij met seizoensbloemen en stimuleren wij uw creative uitingen via een leuk leerprogramma.</p>
+						<p>Meldt u nu aan om mee te doen!</p>
 						<p><a href="#" class="button">Aanmelden</a></p>
 					</div>
-					<div>
-						<img src="./images/workshopimg.jpg" alt="">
+					<div id="workshopimg">
+						<img src="./images/workshopimg.jpg" alt="Bloemstuk met kleine rode bloemen en decoratief papier dat op een tafel staat. In de achtergrond is sfeervol licht.">
 					</div>
 				</div>
 			</section>
