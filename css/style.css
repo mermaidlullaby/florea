@@ -776,6 +776,7 @@ footer td:nth-child(1) {
 	input, textarea, select {
 		width:95%;
 		min-width:300px;
+		background:#fff;
 	}
 		
 	form {
