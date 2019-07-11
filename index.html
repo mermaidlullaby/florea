@@ -35,7 +35,7 @@
 				document.getElementById("logo").style.width = "164px";
 				document.getElementById("keurmerk").style.height = "70px";
 				document.getElementById("keurmerk").style.width = "70px";
-				document.getElementById("flexheader").style.height = "90px";
+				document.getElementById("flexheader").style.height = "100px";
 				document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
 				document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
 				document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
@@ -47,16 +47,16 @@
 				x[i].style.transition = "font-size 0.5s ease-in-out";
 				}
 			  } else {
-				document.getElementById("logo").style.height = "135px";
-				document.getElementById("logo").style.width = "327px";
-				document.getElementById("keurmerk").style.height = "140px";
-				document.getElementById("keurmerk").style.width = "140px";
+				document.getElementById("logo").style.height = "auto";
+				document.getElementById("logo").style.width = "auto";
+				document.getElementById("keurmerk").style.height = "auto";
+				document.getElementById("keurmerk").style.width = "auto";
 				document.getElementById("flexheader").style.height = "160px";
 				var x = document.getElementsByClassName("navlink");
 				var i;
 				for (i = 0; i < x.length; i++) {
 				x[i].style.fontSize = "30px";
-				x[i].style.padding = "15px";
+				x[i].style.padding = "0px";
 				}
 			  }
 		}
@@ -86,7 +86,13 @@
 							<li><a class="navlink" href="#">Boeketten</a></li>
 							<li><a class="navlink" href="#">Bloemstukken</a></li>
 							<li><a class="navlink" href="#">Rouwbloemwerk</a></li>
-							<li><a class="navlink" href="#">Workshops</a></li>
+							<li class="dropdown"><a class="navlink" href="#">Workshops <i class="fas fa-plus-square mob-dropdown"></i></a>
+							<ol class="dropdown-content">
+								<li><a class="navlink" href="#">Lente</a></li>
+								<li><a class="navlink" href="#">Zomer</a></li>
+								<li><a class="navlink" href="#">Herfst</a></li>
+								<li><a class="navlink" href="#">Winter</a></li>
+							</ol></li>
 							<li><a class="navlink" href="#">Bezorgen</a></li>
 							<li><a class="navlink" href="#">Webshop</a></li>
 							<li><a class="navlink" href="#">Contact</a></li>
@@ -127,7 +133,7 @@
 									<img itemprop="image" src="./images/product-2.jpg" alt="Fleurijke boeket met voornamelijk roze, gele, en lichtblauwe bloemen, met veel groen.">
 									<h1 itemprop="name">Pluk de dag</h1>
 									<p itemprop="description">Een mooi gevarieerd boeket met exotisch ogende bloemen, perfect voor een speciaal iemand in jouw leven.</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="34.95">34,95</span></a></p>
 								</div>
 							</article>
 							<article>
@@ -149,34 +155,34 @@
 							<!--  ^ 4 producten -->
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-5.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<img itemprop="image" src="./images/product-5.jpg" alt="Vol boeket met violet, paarse, en blauw-violet bloemen.">
+									<h1 itemprop="name">Extreme violet</h1>
+									<p itemprop="description">Extreem violet paars boeket voor iedere gelegendheid.</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="20.00">20,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
 									<img itemprop="image" src="./images/product-6.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<h1 itemprop="name">Sereen wit</h1>
+									<p itemprop="description">Stijvol boeket handgebonden waar wit en zacht groen een rust geven waar je bij weg kan dromen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="17.50">17,50</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
 									<img itemprop="image" src="./images/product-7.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<h1 itemprop="name">Ingetogen geluk</h1>
+									<p itemprop="description">Een boeket gearrangeerd met zacht tinten in de kleuren groen, zacht geel en diverse groen tinten</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="15.00">15,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
 									<img itemprop="image" src="./images/product-8.jpg" alt="">
-									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
-									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
+									<h1 itemprop="name">Modern rood boeket</h1>
+									<p itemprop="description">Mooi boeket in rode en witte tinten en afgewerkt met decoratief groen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="40.95">40,95</span></a></p>
 								</div>
 							</article>
 						</div>
