@@ -116,6 +116,60 @@ a:hover {
 	color:#f9ffb2;
 }
 
+/* Form formatting */
+
+form {
+	margin:50px;
+}
+
+input, textarea, select {
+	border:1px solid #a0b64e;
+	background-image:url("../images/formimg.jpg");
+	background-position:right bottom;
+	background-repeat:no-repeat;
+	min-height:25px;
+	min-width:300px;
+	display:block;
+	margin-bottom:20px;
+	font-size:18px;
+	font-weight:normal;
+}
+
+textarea {
+	min-width:600px;
+	height:250px;
+}
+
+form p {
+	padding:5px;
+	margin:0;
+}
+
+sub {
+	display:block;
+	text-align:left;
+	padding-left:10px;
+	font-style:italic;
+	color:#787878;
+}
+
+.form-button {
+	display:inline;
+	background:#eff09a;
+	color:#acba60;
+	font-weight:bold;
+	border:1px solid #acba60;
+	margin:10px;
+	min-width:100px;
+	min-height:25px;
+	padding:5px;
+}
+
+.form-button:hover {
+	background:#acba60;
+	border:1px solid #eff09a;
+	color:#eff09a;
+}
 
 /* Header */
 
@@ -214,7 +268,7 @@ main {
 #mainbox {
 	margin:0 auto;
 	margin-top:-200px;
-	margin-bottom:0px;
+	margin-bottom:60px;
 	width:80%;
 	background:#fff;
 	padding:25px;
@@ -464,6 +518,9 @@ footer td:nth-child(1) {
 }
 #img4 {
 	background-image: url("../images/stock4.jpg");
+}
+#img5 {
+	background-image: url("../images/stock5.jpg");
 }
 
 /* Beginning responsive design */
@@ -739,7 +796,7 @@ footer td:nth-child(1) {
 
 	/* Selectively remove parallax divs */
 	
-	#img1 {
+	#img1, #img5 {
 		display:none;
 	}
 	
@@ -759,6 +816,13 @@ footer td:nth-child(1) {
 	
 	.slider-button {
 		margin-top:650px;
+	}
+	
+	/* Form fixes */
+	
+	input, textarea, select {
+		width:95%;
+		min-width:300px;
 	}
 	
 }
