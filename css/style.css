@@ -129,6 +129,7 @@ a:hover {
 	justify-content: center;
 	align-items:center;
 	box-shadow: 1px 1px 10px #AFAFAF;
+	padding-bottom:20px;
 }
 
 #logo, #keurmerk {
@@ -147,7 +148,7 @@ nav > ol  {
 nav > ol  li {
 	font-family: 'Dancing Script', cursive;
 	font-size:30px;
-	padding:15px;
+	padding:10px;
 	margin:auto;
 	list-style: none;
 }
@@ -166,6 +167,38 @@ nav a:hover {
 /* Hide mobile nav at first */
 #nav-menu {
 	display:none;
+}
+
+
+/* Dropdown menu */
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.dropdown-content {
+	display:none;
+	padding:0;
+	position: absolute;
+	background-color: #fff;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;	
+}
+li.dropdown:hover > .dropdown-content  {
+	display: block;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size:25px;
+  text-align:left;
+}
+
+.mob-dropdown {
+	display:none !important;
 }
 
 
@@ -204,7 +237,7 @@ main {
 	padding-bottom:50px;
 }
 
-#webshopfront p {
+#webshopfront > p {
 	padding:0px;
 }
 
@@ -223,6 +256,11 @@ main {
 
 .product {
 	text-align:center;
+}
+
+.product > p {
+	padding-left:2px;
+	padding-right:2px;
 }
 
 #webshopgrid article:hover {
@@ -429,6 +467,8 @@ footer td:nth-child(1) {
 }
 
 /* Beginning responsive design */
+
+/* Fix for the nav size between 1200 and 1024px */
 @media (max-width: 1200px) {
 
 	nav > ol  li {
@@ -451,6 +491,8 @@ footer td:nth-child(1) {
 	
 }
 
+
+/* Smaller screens and tablets */
 @media (max-width: 1024px) {
 	
 	
@@ -459,7 +501,8 @@ footer td:nth-child(1) {
 	#flexheader {
 		display: flex;
 		flex-wrap:wrap;
-		height:250px
+		min-height:150px;
+		padding-bottom:0px;
 	}
 	
 	#flexnav {
@@ -476,12 +519,10 @@ footer td:nth-child(1) {
 		order: 2; 
 	}
 	#logo {
-		height:auto;
-		width:auto;
+		transform: scale(0.99,0.99);
 	}
 	#keurmerk {
-		height:auto;
-		width:auto;
+		transform: scale(0.99,0.99);
 	}
 	
 
@@ -546,6 +587,43 @@ footer td:nth-child(1) {
 		background:#b3cc57;
 	}
 	
+	/* Dropdown menu */
+	
+	.mob-dropdown {
+		display:inline !important;
+	}
+
+	.dropdown {
+		position: relative;
+		display: -block;
+	}
+
+	.dropdown-content {
+		display:none;
+		padding:0;
+		background:#f9ffb2;
+		position: relative;
+		box-shadow: 0px 0px 0px;
+		z-index: 1;	
+	}
+	li.dropdown:hover > .dropdown-content  {
+		display: block;
+	}
+
+	.dropdown-content a {
+		text-decoration: none;
+		display: block;
+		text-align: center;
+		font-size:22px;
+		padding:2px;
+		margin:0;
+	}
+	
+	.dropdown-content a:hover, nav > ol > li.dropdown-content:hover {
+		background:#ecf081;
+	}
+
+	
 	
 	/* Main content */
 	
@@ -598,29 +676,38 @@ footer td:nth-child(1) {
 
 } 
 
+/* Mobile */
+
 @media (max-width: 768px) {
 	
 	/* Header */
 	
 	#flexheader {
-		height:150px
+		height:150px;
+		position:relative;
 	}
 	
 	#logo {
-		height:68px;
-		widht:164px;
+		transform: scale(0.8,0.8);
+	}
+	#keurmerk {
+		transform: scale(0.8,0.8);
 	}
 	
-	#keurmerk {
-		height:70px;
-		width:70px;
-	}
 	
 	/* Main */
 	
 	.youtubevid {
 		width:80%;
 		}
+		
+	main {
+		margin-bottom:-40px;
+	}
+		
+	#mainbox {
+		padding-top:25px;
+	}
 		
 	#mainbox h1 {
 		font-size:50px;
@@ -648,6 +735,30 @@ footer td:nth-child(1) {
 		min-width:100%;
 		padding:0;
 		margin:0;
+	}
+
+	/* Selectively remove parallax divs */
+	
+	#img1 {
+		display:none;
+	}
+	
+	/* Did you know images removed */
+	
+	
+	.didyouknow {
+		min-height:200px;
+		margin:0;
+	}
+	
+	.didyouknow > h2 {
+		padding:5px;
+		margin-top:10px;
+		margin:0;
+	}
+	
+	.slider-button {
+		margin-top:650px;
 	}
 	
 }
