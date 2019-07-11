@@ -770,6 +770,17 @@ footer td:nth-child(1) {
 		font-size:50px;
 		padding-top:20px;
 	}
+	
+	/* Form fixes */
+	
+	input, textarea, select {
+		width:95%;
+		min-width:300px;
+	}
+		
+	form {
+		margin:0;
+	}	
 
 	/* Webshop */
 
@@ -817,15 +828,4 @@ footer td:nth-child(1) {
 	.slider-button {
 		margin-top:650px;
 	}
-	
-	/* Form fixes */
-	
-	input, textarea, select {
-		width:95%;
-		min-width:300px;
-	}
-		
-	form {
-		margin:5px;
-	}	
 }
