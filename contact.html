@@ -1,0 +1,217 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Florea</title>
+		<meta name="description" content="">
+		<meta name="robots" content="index, follow">
+		<meta name="viewport" content="width=device-width, initial-scale=1">		
+		<meta name="author" content="">
+		<meta name="web_author" content="">
+		<meta name="copyright" content="">
+		<meta name="rating" content="">
+		<meta name="reply-to" content="">		
+		<meta property="og:title" content="">
+		<meta property="og:site_name" content="">
+		<meta property="og:type" content="website">
+		<meta property="og:description" content="">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="">		
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:site" content="@">
+		<meta name="twitter:image:alt" content="">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Cabin|Dancing+Script|Open+Sans&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://kit.fontawesome.com/0972224cc4.js"></script>		
+		<script>
+		window.onscroll = function() {
+			if (window.innerWidth > 1200) scrollFunction()
+		};
+
+		function scrollFunction() {
+			  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+				document.getElementById("logo").style.height = "68px";
+				document.getElementById("logo").style.width = "164px";
+				document.getElementById("keurmerk").style.height = "70px";
+				document.getElementById("keurmerk").style.width = "70px";
+				document.getElementById("flexheader").style.height = "100px";
+				document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "22px";
+				x[i].style.padding = "5px";
+				x[i].style.transition = "font-size 0.5s ease-in-out";
+				}
+			  } else {
+				document.getElementById("logo").style.height = "auto";
+				document.getElementById("logo").style.width = "auto";
+				document.getElementById("keurmerk").style.height = "auto";
+				document.getElementById("keurmerk").style.width = "auto";
+				document.getElementById("flexheader").style.height = "160px";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "30px";
+				x[i].style.padding = "0px";
+				}
+			  }
+		}
+	
+		
+		function myFunction() {
+			var x = document.getElementById("topnav");
+			if (x.className === "flexnav") {
+				x.className += " responsive";
+			} else {
+				x.className = "flexnav";
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<div id="container">
+			<header id="flexheader">
+				<div id="fleximg">
+					<img src="./images/logo.png" alt="Florea Logo" id="logo">
+				</div>
+				<div id="flexnav">
+					<p id="nav-menu"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> Menu</a></p>
+					<nav id="topnav" class="flexnav">
+						<ol>
+							<li><a class="navlink" href="index.html">Home</a></li>
+							<li><a class="navlink" href="#">Boeketten</a></li>
+							<li><a class="navlink" href="#">Bloemstukken</a></li>
+							<li><a class="navlink" href="#">Rouwbloemwerk</a></li>
+							<li class="dropdown"><a class="navlink" href="#">Workshops <i class="fas fa-plus-square mob-dropdown"></i></a>
+							<ol class="dropdown-content">
+								<li><a class="navlink" href="#">Lente</a></li>
+								<li><a class="navlink" href="#">Zomer</a></li>
+								<li><a class="navlink" href="#">Herfst</a></li>
+								<li><a class="navlink" href="#">Winter</a></li>
+							</ol></li>
+							<li><a class="navlink" href="#">Bezorgen</a></li>
+							<li><a class="navlink" href="#">Webshop</a></li>
+							<li><a class="navlink" href="contact.html">Contact</a></li>
+						</ol>
+					</nav>
+				</div>
+				<div id="flexkeurmerk">
+					<img src="./images/keurmerk.png" alt="Dutch Florist Keurmerk" id="keurmerk">
+				</div>
+			</header>
+			<!-- Parallax -->
+			<div class="parallax" id="img5">
+			</div>
+			<!-- Content -->
+			<main>
+				<section id="mainbox">
+					<h1>Contact</h1>
+					<p>Heeft u vragen, opmerkingen of een klacht? Vul dan gerust ons contact formulier in.  Wij proberen om binnen 1 werkdag een antwoord terug te sturen.</p>
+					<form>
+						<p>Naam:*</p>
+						<p><input type="text" name="naam"></p>
+						<p>Emailadres:*</p>
+						<p><input type="text" name="email"></p>
+						<p>Telefoon:</p>
+						<p><input type="text" name="telefoon"></p>
+						<p>Onderwerp:*</p>
+							<select name="subject">
+								<option value="" disabled selected>Kies een onderwerp</option>
+								<option value="vraag">Algemene vraag</option>
+								<option value="opmerking">Opmerking</option>
+								<option value="bestelling">Vragen m.b.t. uw bestelling</option>
+								<option value="helpbestellen">Problemen met bestellen</option>
+							</select>
+						<p>Bestelnummer:</p>
+						<sub>Begint met 100REA-</sub>
+						<p><input type="text" name="bestelnummer"></p>
+						<p>Vraag/opmerking:*</p>
+						<p><textarea></textarea></p>
+						<input type="submit" value="Verzenden" class="form-button"><input type="reset" value="Reset" class="form-button">
+					</form>
+				</section>
+			</main>
+			<!-- Parallax -->
+			<div class="parallax" id="img4">
+			</div>
+			<!-- Footer -->
+			<footer>
+				<section>
+					<h3>Contactgegevens</h3>
+					<address>
+						<p>Ruys de Beerenbroucklaan 29</p>
+						<p>6417 CC Heerlen<p>
+						<p><a href="tel:088-7795850">+31 (0)88 779 5850</a></p>
+						<p><a href="mailto:florea@reacollege.eu">florea@reacollege.eu</a></p>
+						<p><a href="contact.html" class="button">Neem contact op</a></p>
+					</address>
+				</section>
+				<section id="socialmedia">
+					<h3>Social Media</h3>
+					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
+				</section>
+				<section>
+					<h3>Openingstijden</h3>
+						<table>
+							<tr>
+								<td>
+									<p>Ma-Wo:</p>
+								</td>
+								<td>
+									<p>08:00 - 17:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Do:</p>
+								</td>
+								<td>
+									<p>08:00 - 20:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Vr-Za:</p>
+								</td>
+								<td>
+									<p>08:00 - 17:00</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<p>Zo:</p>
+								</td>
+								<td>
+									<p>12:00 - 16:00</p>
+								</td>
+							</tr>
+						</table>
+				</section>
+			</footer>
+		</div>
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+				showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			  var i;
+			  var x = document.getElementsByClassName("slides");
+			  if (n > x.length) {slideIndex = 1}
+			  if (n < 1) {slideIndex = x.length}
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+				x[slideIndex-1].style.display = "block";
+			}
+		</script>
+	</body>
+</html>
