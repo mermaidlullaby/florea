@@ -105,11 +105,39 @@ a:hover {
 	color:#ab3e5b;
 }
 
+ul.breadcrumb {
+	margin:0;
+	margin-bottom:30px;
+	padding:0;	
+	list-style: none;
+	text-align:left;
+}
+ul.breadcrumb li {
+	font-variant:small-caps;
+	font-size:18px;
+	display:inline;
+}
+ul.breadcrumb li+li:before {
+	padding: 8px;
+	color: black;
+	content: ">";
+}
+
+.imgcenter {
+	display:block;
+	margin:auto auto;
+}
+
 /* Social media icons formatting */
 
 .fab {
-	font-size:50px;
-	text-align:center;
+	font-size:60px;
+}
+
+.fab:hover {
+	font-size:65px;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-in-out;	
 }
 
 .fab>a, .fab>a:link {
@@ -171,10 +199,16 @@ sub {
 	color:#eff09a;
 }
 
+input.radiobt {
+	min-height:5px;
+	min-width:5px;
+	display:inline;
+}
+
 /* Header */
 
 #flexheader {
-	height:160px;
+	height:100px;
 	width:100%;
 	background:#fff;
 	position:fixed;
@@ -201,7 +235,7 @@ nav > ol  {
 
 nav > ol  li {
 	font-family: 'Dancing Script', cursive;
-	font-size:30px;
+	font-size:22px;
 	padding:10px;
 	margin:auto;
 	list-style: none;
@@ -239,15 +273,28 @@ nav a:hover {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	z-index: 1;	
 }
-li.dropdown:hover > .dropdown-content  {
+
+.dropdown-content2 {
+	margin-left:95px;
+	margin-top:-40px;
+}
+li.dropdown:hover > .dropdown-content   {
 	display: block;
 }
 
+ol.dropdown-content li {
+	min-width:75px;
+}
+
+ol.dropdown-content li:hover {
+	border-bottom:1px solid #b3cc57;
+}
+
 .dropdown-content a {
-  padding: 12px 16px;
+  padding: 3px;
   text-decoration: none;
   display: block;
-  font-size:25px;
+  font-size:22px;
   text-align:left;
 }
 
@@ -279,6 +326,13 @@ main {
 .youtubevid {
 	width:560px;
 	height:315px;
+}
+
+.sectionbox {
+	background:#fff;
+	margin:0px;
+	padding:30px;
+	padding-bottom:50px;
 }
 
 /* Webshop */
@@ -379,7 +433,7 @@ main {
 }
 
 #wjd1 {
-	background: url('../images/wistjedat1.jpg');
+	background: url('../images/wistjedat4.jpg');
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -480,7 +534,6 @@ footer h3 {
 
 i.fab {
 	padding:20px;
-	font-size:70px;
 }
 
 footer a.button {
@@ -522,311 +575,14 @@ footer td:nth-child(1) {
 #img5 {
 	background-image: url("../images/stock5.jpg");
 }
-
-/* Beginning responsive design */
-
-/* Fix for the nav size between 1200 and 1024px */
-@media (max-width: 1200px) {
-
-	nav > ol  li {
-	font-family: 'Dancing Script', cursive;
-	font-size:22px;
-	padding:5px;
-	margin:auto;
-	list-style: none;
-	}
-	
-	#logo {
-		height:68px;
-		widht:164px;
-	}
-	
-	#keurmerk {
-		height:70px;
-		width:70px;
-	}
-	
+#img6 {
+	background-image: url("../images/stock6.jpg");
+}
+#img7 {
+	background-image: url("../images/stock7.jpg");
+}
+#img8{
+	background-image: url("../images/stock8.jpg");
 }
 
 
-/* Smaller screens and tablets */
-@media (max-width: 1024px) {
-	
-	
-	/* Header */
-	
-	#flexheader {
-		display: flex;
-		flex-wrap:wrap;
-		min-height:150px;
-		padding-bottom:0px;
-	}
-	
-	#flexnav {
-		flex: 100%;
-	}
-	
-	#flexheader img:nth-child(1), #flexheader #flexnav:nth-child(1) {
-		order: 1; 
-	}
-    #flexheader img:nth-child(2), #flexheader #flexnav:nth-child(2) {
-		order: 3;
-	}
-	#flexheader img:nth-child(3), #flexheader #flexnav:nth-child(3) {
-		order: 2; 
-	}
-	#logo {
-		transform: scale(0.99,0.99);
-	}
-	#keurmerk {
-		transform: scale(0.99,0.99);
-	}
-	
-
-	
-	
-	/* Nav */
-	
-	.flexnav {
-		display:none;
-	}
-	
-	.flexnav.responsive {
-		display:flex;
-		flex-direction:column;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.flexnav > ol > li {
-		flex:100%;
-		text-align:center;
-		padding:5px;
-	}
-	
-	nav > ol {
-		width:100%;
-		margin:0;
-		padding:0;
-	}
-	
-	.flexnav ol li:hover, .flexnav a:hover {
-		background:#f9ffb2;
-		color:#92a647;
-	}
-	
-	#nav-menu{
-		display:block;
-		text-align: center;
-		margin-top:0px;
-		padding-top:15px;
-		padding-bottom:5px;
-		margin-bottom:0px;
-		border-bottom:1px solid #f9ffb2;
-		font-family: 'Cabin', sans-serif;
-		background:#b3cc57;
-		height:40px;
-		font-size:25px;
-	}
-	
-	#nav-menu a, nav a, nav a:link {
-		color: #fff;
-		text-decoration: none;
-	}
-	
-	#nav-menu:hover a, nav a:hover, nav > ol > li:hover a {
-		color:#6f7f36;
-	}
-	
-	nav {
-		margin: 0;
-		padding:0;
-		background:#b3cc57;
-	}
-	
-	/* Dropdown menu */
-	
-	.mob-dropdown {
-		display:inline !important;
-	}
-
-	.dropdown {
-		position: relative;
-		display: -block;
-	}
-
-	.dropdown-content {
-		display:none;
-		padding:0;
-		background:#f9ffb2;
-		position: relative;
-		box-shadow: 0px 0px 0px;
-		z-index: 1;	
-	}
-	li.dropdown:hover > .dropdown-content  {
-		display: block;
-	}
-
-	.dropdown-content a {
-		text-decoration: none;
-		display: block;
-		text-align: center;
-		font-size:22px;
-		padding:2px;
-		margin:0;
-	}
-	
-	.dropdown-content a:hover, nav > ol > li.dropdown-content:hover {
-		background:#ecf081;
-	}
-
-	
-	
-	/* Main content */
-	
-	#mainbox {
-		margin:0 auto;
-		width:100%;
-		padding:0;
-		background:#f9ffb2;
-		box-shadow:0px 0px 0px;
-	}
-	#mainbox h1 {
-		color:#9bb14b;
-	}
-	
-	/* Webshop */
-
-	#webshopgrid > article {
-		flex: 33%;
-	}
-	
-	/* Workshop */
-	
-	#workshop {
-		width:100%;
-		background:#ffbe41;
-		margin:0;
-		padding:0;
-	}
-	
-	/* Selectively remove parallax divs */
-	
-	#img2, #img3 {
-		display:none;
-	}
-	
-	/* Footer alignment of elements */
-	
-	footer {
-		flex-direction: column;
-	}
-	
-	footer > section {
-		padding-bottom:25px;
-	}
-	
-	footer td > p {
-		text-align:right;
-	}
-	
-
-} 
-
-/* Mobile */
-
-@media (max-width: 768px) {
-	
-	/* Header */
-	
-	#flexheader {
-		height:150px;
-		position:relative;
-	}
-	
-	#logo {
-		transform: scale(0.8,0.8);
-	}
-	#keurmerk {
-		transform: scale(0.8,0.8);
-	}
-	
-	
-	/* Main */
-	
-	.youtubevid {
-		width:80%;
-		}
-		
-	main {
-		margin-bottom:20px;
-	}
-		
-	#mainbox {
-		padding-top:25px;
-	}
-		
-	#mainbox h1 {
-		font-size:50px;
-		padding-top:20px;
-	}
-	
-	/* Form fixes */
-	
-	input, textarea, select {
-		width:95%;
-		min-width:300px;
-		background:#fff;
-	}
-		
-	form {
-		margin:auto 0;
-	}	
-
-	/* Webshop */
-
-	#webshopgrid > article {
-		flex: 100%;
-	}
-	
-	/* Workshop */
-	
-	#workshop {
-		flex-direction:column-reverse;
-	}
-	
-	#workshopimg {
-		width:100%;
-	}
-	
-	#workshop img {
-		object-fit: contain;
-		min-width:100%;
-		padding:0;
-		margin:0;
-	}
-
-	/* Selectively remove parallax divs */
-	
-	#img1, #img5 {
-		display:none;
-	}
-	
-	/* Did you know images removed */
-	
-	
-	.didyouknow {
-		min-height:200px;
-		margin:0;
-	}
-	
-	.didyouknow > h2 {
-		padding:5px;
-		margin-top:10px;
-		margin:0;
-	}
-	
-	.slider-button {
-		margin-top:650px;
-	}
-}
