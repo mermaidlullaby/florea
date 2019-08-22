@@ -2,28 +2,66 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title>Florea - De vrolijke florist</title>
-		<meta name="description" content="Florea is een florist die zich specialiseerd in seizoensboeketten, en tevens seizoens workshops organiseerd.">
+		<title>Florea</title>
+		<meta name="description" content="">
 		<meta name="robots" content="index, follow">
 		<meta name="viewport" content="width=device-width, initial-scale=1">		
-		<meta name="author" content="Sanne Vallinga">
-		<meta name="web_author" content="Sanne Vallinga">
-		<meta name="copyright" content="Florea">
-		<meta property="og:title" content=">Welkom bij Florea - De vrolijke florist">
-		<meta property="og:site_name" content="Florea Florist">
+		<meta name="author" content="">
+		<meta name="web_author" content="">
+		<meta name="copyright" content="">
+		<meta name="rating" content="">
+		<meta name="reply-to" content="">		
+		<meta property="og:title" content="">
+		<meta property="og:site_name" content="">
 		<meta property="og:type" content="website">
-		<meta property="og:description" content="Florea is een florist die zich specialiseerd in seizoensboeketten, en tevens seizoens workshops organiseerd.">
-		<meta property="og:url" content="http://www.florea.nl">
+		<meta property="og:description" content="">
+		<meta property="og:url" content="">
 		<meta property="og:image" content="">		
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:site" content="@">
 		<meta name="twitter:image:alt" content="">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/style_responsive.css">
 		<link href="https://fonts.googleapis.com/css?family=Cabin|Dancing+Script|Open+Sans&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script src="https://kit.fontawesome.com/0972224cc4.js"></script>		
 		<script>
+		window.onscroll = function() {
+			if (window.innerWidth > 1200) scrollFunction()
+		};
+
+		function scrollFunction() {
+			  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+				document.getElementById("logo").style.height = "68px";
+				document.getElementById("logo").style.width = "164px";
+				document.getElementById("keurmerk").style.height = "70px";
+				document.getElementById("keurmerk").style.width = "70px";
+				document.getElementById("flexheader").style.height = "90px";
+				document.getElementById("flexheader").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("keurmerk").style.transition = "height 0.5s ease-in-out";
+				document.getElementById("logo").style.transition = "height 0.5s ease-in-out";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "22px";
+				x[i].style.padding = "5px";
+				x[i].style.transition = "font-size 0.5s ease-in-out";
+				}
+			  } else {
+				document.getElementById("logo").style.height = "135px";
+				document.getElementById("logo").style.width = "327px";
+				document.getElementById("keurmerk").style.height = "140px";
+				document.getElementById("keurmerk").style.width = "140px";
+				document.getElementById("flexheader").style.height = "160px";
+				var x = document.getElementsByClassName("navlink");
+				var i;
+				for (i = 0; i < x.length; i++) {
+				x[i].style.fontSize = "30px";
+				x[i].style.padding = "15px";
+				}
+			  }
+		}
+	
+		
 		function myFunction() {
 			var x = document.getElementById("topnav");
 			if (x.className === "flexnav") {
@@ -38,36 +76,25 @@
 		<div id="container">
 			<header id="flexheader">
 				<div id="fleximg">
-					<img src="./images/logo-2.png" alt="Florea Bloemen en Planten - Logo" id="logo">
+					<img src="./images/logo.png" alt="Florea Logo" id="logo">
 				</div>
 				<div id="flexnav">
 					<p id="nav-menu"><a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i> Menu</a></p>
 					<nav id="topnav" class="flexnav">
 						<ol>
-							<li><a class="navlink" href="index.html">Home</a></li>
+							<li><a class="navlink" href="#">Home</a></li>
 							<li><a class="navlink" href="#">Boeketten</a></li>
 							<li><a class="navlink" href="#">Bloemstukken</a></li>
 							<li><a class="navlink" href="#">Rouwbloemwerk</a></li>
-							<li class="dropdown"><a class="navlink" href="#">Workshops <i class="fas fa-plus-square mob-dropdown"></i></a>
-							<ol class="dropdown-content">
-								<li><a class="navlink" href="#">Aanmelden</a></li>
-								<li><a class="navlink" href="#">Kalender</a></li>
-								<li class="dropdown"><a class="navlink" href="#">Seizoenen <i class="fas fa-plus-square mob-dropdown"></i></a>
-								<ol class="dropdown-content dropdown-content2">
-									<li><a class="navlink" href="#">Lente</a></li>
-									<li><a class="navlink" href="#">Zomer</a></li>
-									<li><a class="navlink" href="herfst.html">Herfst</a></li>
-									<li><a class="navlink" href="#">Winter</a></li>
-								</ol></li>
-							</ol></li>
-							<li><a class="navlink" href="bezorgen.html">Bezorgen</a></li>
+							<li><a class="navlink" href="#">Workshops</a></li>
+							<li><a class="navlink" href="#">Bezorgen</a></li>
 							<li><a class="navlink" href="#">Webshop</a></li>
-							<li><a class="navlink" href="contact.html">Contact</a></li>
+							<li><a class="navlink" href="#">Contact</a></li>
 						</ol>
 					</nav>
 				</div>
-				<div id="flexkeurmerk">
-					<img src="./images/keurmerk-2.png" alt="Dutch Florist Keurmerk" id="keurmerk">
+				<div id="flexlogo">
+					<img src="./images/keurmerk.png" alt="Dutch Florist Keurmerk" id="keurmerk">
 				</div>
 			</header>
 			<!-- Parallax -->
@@ -77,9 +104,9 @@
 			<main>
 				<section id="mainbox">
 					<h1>Welkom bij Florea</h1>
-					<p>Lorem ipsum dolor sit amet, <a href="#">consectetur adipisicing elit</a>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 					<h2>Florea Highlights</h2>
-					<iframe class="youtubevid" src="https://www.youtube.com/embed/EBml76U9Prs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/EBml76U9Prs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</section>
 				<section id="webshopfront">
 					<h2>Standaard seizoens selecties</h2>
@@ -100,7 +127,7 @@
 									<img itemprop="image" src="./images/product-2.jpg" alt="Fleurijke boeket met voornamelijk roze, gele, en lichtblauwe bloemen, met veel groen.">
 									<h1 itemprop="name">Pluk de dag</h1>
 									<p itemprop="description">Een mooi gevarieerd boeket met exotisch ogende bloemen, perfect voor een speciaal iemand in jouw leven.</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="34.95">34,95</span></a></p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 							<article>
@@ -122,34 +149,34 @@
 							<!--  ^ 4 producten -->
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-5.jpg" alt="Vol boeket met violet, paarse, en blauw-violet bloemen.">
-									<h1 itemprop="name">Extreme violet</h1>
-									<p itemprop="description">Extreem violet paars boeket voor iedere gelegendheid.</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="20.00">20,-</span></a></p>
+									<img itemprop="image" src="./images/product-5.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-6.jpg" alt="Vol boeket met verschillende wit kleurige bloemen.">
-									<h1 itemprop="name">Sereen wit</h1>
-									<p itemprop="description">Stijvol boeket handgebonden waar wit en zacht groen een rust geven waar je bij weg kan dromen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="17.50">17,50</span></a></p>
+									<img itemprop="image" src="./images/product-6.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-7.jpg" alt="Vol boeket met zachte tinten groen en geel.">
-									<h1 itemprop="name">Ingetogen geluk</h1>
-									<p itemprop="description">Een boeket gearrangeerd met zacht tinten in de kleuren groen, zacht geel en diverse groen tinten</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="15.00">15,-</span></a></p>
+									<img itemprop="image" src="./images/product-7.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 							<article>
 								<div class="product" itemscope itemtype="http://schema.org/Product">
-									<img itemprop="image" src="./images/product-8.jpg" alt="Vol boeket met rode en witte bloemen, en veel decoratief groen.">
-									<h1 itemprop="name">Modern rood boeket</h1>
-									<p itemprop="description">Mooi boeket in rode en witte tinten en afgewerkt met decoratief groen</p>
-									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="40.95">40,95</span></a></p>
+									<img itemprop="image" src="./images/product-8.jpg" alt="">
+									<h1 itemprop="name">Zomers boeket bont gekleurd</h1>
+									<p itemprop="description">Prachtig boeket van fel gekleurde bloemen</p>
+									<p class="bestelknop"><a href="#">Bestel vanaf <span itemprop="priceCurrency" content="EUR">€</span><span itemprop="price" content="18.00">18,-</span></a></p>
 								</div>
 							</article>
 						</div>
@@ -167,8 +194,8 @@
 					<div id="wjd1">
 					</div>
 					<h2>Wist je dat...</h2>
-					<p>Rozen kennen een historie van duizenden jaren. Oorspronkelijk werd de roos gekweekt in China, maar ook de oude Grieken, de Romeinen en de Egyptenaren kweekten al rozen. Wat dat betreft waren we er in Nederland laat bij. Hier komt de roos pas echt in de geschiedenisboeken voor vanaf de zestiende eeuw. Ze waren in eerste instantie alleen beschikbaar voor de elite, die prachtige rozentuinen bij hun paleizen en landhuizen lieten aanleggen. Vooral de echtgenote van Napoleon Bonaparte was een kei in het aanleggen van prachtige rozentuinen en door haar ontstonden dan ook de mooie rosaria, de zogenaamde pronktuinen voor rozen.</p>
-					<p>Tot omstreeks 1800 werden er uitsluitend wilde rozen gekweekt. Daarna werden er ook ander type rozen ontwikkeld, de hybride rozen. Het voordeel van deze rozen was dat de vorm aangepast kon worden, maar ook dat ze een langere bloeitijd hadden dan de wilde rozen. </p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>		
+					<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
 				</div>
 				<div class="slides">
 					<div id="wjd2">
@@ -198,7 +225,7 @@
 						<p>Meldt u nu aan om mee te doen!</p>
 						<p><a href="#" class="button">Aanmelden</a></p>
 					</div>
-					<div id="workshopimg">
+					<div>
 						<img src="./images/workshopimg.jpg" alt="Bloemstuk met kleine rode bloemen en decoratief papier dat op een tafel staat. In de achtergrond is sfeervol licht.">
 					</div>
 				</div>
@@ -213,15 +240,15 @@
 					<address>
 						<p>Ruys de Beerenbroucklaan 29</p>
 						<p>6417 CC Heerlen<p>
-						<p><a href="tel:00310887795850">+31 (0)88 779 5850</a></p>
+						<p><a href="tel:088-7795850">+31 (0)88 779 5850</a></p>
 						<p><a href="mailto:florea@reacollege.eu">florea@reacollege.eu</a></p>
-						<p><a href="contact.html" class="button">Neem contact op</a></p>
+						<p><a href="#" class="button">Neem contact op</a></p>
 					</address>
 				</section>
 				<section id="socialmedia">
 					<h3>Social Media</h3>
-					<a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i></a>
-					<a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-square"></i></a>
+					<a href="#"><i class="fab fa-twitter-square"></i></a>
+					<a href="#"><i class="fab fa-facebook-square"></i></a>
 				</section>
 				<section>
 					<h3>Openingstijden</h3>
