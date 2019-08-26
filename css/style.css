@@ -50,15 +50,14 @@ h3 {
 
 /* Text formatting */
 
-p {
+p, blockquote {
 	font-family: 'Open Sans', sans-serif;
 	font-size:18px;
-	padding:15px;
 	text-align:center;
 }
 
-#mainbox p {
-	text-align:left;
+p {
+	padding:5px;
 }
 
 .button {
@@ -105,19 +104,66 @@ a:hover {
 	color:#ab3e5b;
 }
 
-ul.breadcrumb {
-	margin:0;
-	margin-bottom:30px;
-	padding:0;	
-	list-style: none;
+ol, li {
 	text-align:left;
 }
-ul.breadcrumb li {
+
+/* Testimonials */
+
+
+blockquote {
+	padding:25px;
+	margin-top:20px;
+	margin-bottom:20px;
+	box-shadow: 1px 1px 5px #AFAFAF;
+	border-radius:15px;
+}
+
+#mainbox p, blockquote {
+	text-align:left;
+}
+
+blockquote:hover {
+	background:#fcffcc;
+	transition-duration: 0.3s;
+	transition-timing-function: ease-in-out;
+}
+
+#testimonials {
+	display:flex;
+}
+
+#testimonials blockquote {
+	flex: 50%;
+	margin:10px;
+	justify-content: center;
+}
+
+.testimonialauthor {
+	font-weight:bold;
+	display:block;
+	text-indent:20px;
+	padding:10px;
+}
+
+.testimonialauthor::before {
+	content: "-- ";
+}
+
+/* Breadcrumbs */
+
+ol.breadcrumb {
+	margin:0;
+	padding:0;	
+	list-style: none;
+	float:left;
+}
+ol.breadcrumb li {
 	font-variant:small-caps;
 	font-size:18px;
 	display:inline;
 }
-ul.breadcrumb li+li:before {
+ol.breadcrumb li+li:before {
 	padding: 8px;
 	color: black;
 	content: ">";
@@ -127,6 +173,26 @@ ul.breadcrumb li+li:before {
 	display:block;
 	margin:auto auto;
 }
+
+/* Fix for h1 on breadcrumb pages */
+
+#breadcrumbheader {
+	clear:both;
+}
+
+/* Languages */
+
+ol.languages {
+	list-style:none;
+	margin:0;
+	float:right;
+}
+
+ol.languages > li {
+	
+	display:inline;
+}
+
 
 /* Social media icons formatting */
 
@@ -548,6 +614,36 @@ footer td:nth-child(1) {
 	text-align:right;
 }
 
+#disclaimer {
+	width:100%;
+}
+
+#disclaimer ul {
+	text-align:center;
+}
+
+#disclaimer ul > li {
+	display:inline;
+	list-style:none;
+}
+
+#disclaimer ul > li:not(:first-child)::before {
+	content: "- ";
+} 
+
+#disclaimer p {
+	font-size:14px;
+	margin:10px;
+	padding:0;
+}
+
+#disclaimer a, #disclaimer a:active {
+	color:#ab3e5b;
+}
+
+#disclaimer a:hover {
+	color:#f9ffb2;
+}
 /* Parallax */
 
 .parallax {
