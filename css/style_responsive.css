@@ -160,10 +160,16 @@
 	ol.dropdown-content li, ol.dropdown-content li:hover {
 		border:0px;
 		width:100%;
+		padding-left:0;
 	}
 	
 	.dropdown-content2 {
 		margin:auto;
+	}
+	
+	li.dropdown {
+		display:inline; 
+		color:#fff;
 	}
 	
 	/* Main content */
