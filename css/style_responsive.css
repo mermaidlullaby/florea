@@ -130,7 +130,7 @@
 
 	.dropdown {
 		position: relative;
-		display: -block;
+		display: block;
 	}
 
 	.dropdown-content {
@@ -165,10 +165,11 @@
 	
 	.dropdown-content2 {
 		margin:auto;
+		padding-bottom:0;
+		margin-bottom:0;
 	}
 	
 	li.dropdown {
-		display:inline; 
 		color:#fff;
 	}
 	
