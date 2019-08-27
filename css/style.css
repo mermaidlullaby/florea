@@ -50,7 +50,7 @@ h3 {
 
 /* Text formatting */
 
-p, blockquote {
+p, li, blockquote {
 	font-family: 'Open Sans', sans-serif;
 	font-size:18px;
 	text-align:center;
@@ -111,7 +111,7 @@ ol, li {
 /* Testimonials */
 
 
-blockquote {
+#testimonials blockquote {
 	padding:25px;
 	margin-top:20px;
 	margin-bottom:20px;
@@ -119,11 +119,11 @@ blockquote {
 	border-radius:15px;
 }
 
-#mainbox p, blockquote {
+#mainbox p, #testimonials blockquote {
 	text-align:left;
 }
 
-blockquote:hover {
+#testimonials blockquote:hover {
 	background:#fcffcc;
 	transition-duration: 0.3s;
 	transition-timing-function: ease-in-out;
@@ -131,6 +131,7 @@ blockquote:hover {
 
 #testimonials {
 	display:flex;
+	flex-direction: row;
 }
 
 #testimonials blockquote {
@@ -426,15 +427,7 @@ main {
 	justify-content: center;
 	margin-bottom:20px;
 	transition-duration: 0.5s;
-}
-
-.product {
 	text-align:center;
-}
-
-.product > p {
-	padding-left:2px;
-	padding-right:2px;
 }
 
 #webshopgrid article:hover {
@@ -549,6 +542,23 @@ main {
 
 #workshop p {
 	padding:5px;
+}
+
+#wssamples {
+	display:flex;
+	width:100%;
+	flex-flow: row wrap;
+	text-align:center;
+}
+
+.wsimg {
+	flex:33%;
+}
+
+/* Bezorgen */
+
+#bezorgen {
+	list-style:none;
 }
 
 /* Footer */
@@ -679,6 +689,9 @@ footer td:nth-child(1) {
 }
 #img8{
 	background-image: url("../images/stock8.jpg");
+}
+#img9{
+	background-image: url("../images/stock9.jpg");
 }
 
 

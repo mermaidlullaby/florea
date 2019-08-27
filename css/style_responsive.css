@@ -57,7 +57,9 @@
 		transform: scale(0.99,0.99);
 	}
 	
-
+	main {
+		margin-top:20px;
+	}
 	
 	
 	/* Nav */
@@ -174,7 +176,20 @@
 	}
 	#mainbox h1 {
 		color:#ab3e5b;
-		padding-top:35px;
+		padding-top:15px;
+	}
+	
+	/* Testimonials */
+	
+	#testimonials {
+		width:100%;
+		flex-wrap: wrap;
+	}
+	
+	#testimonials blockquote {
+		background:#fcffcc;
+		display:block;
+		flex:100%;
 	}
 	
 	/* Image max width */
@@ -182,6 +197,11 @@
 	img {
 		max-width:100%;
 	}
+	
+	.wsimg {
+		flex:100%;
+	}
+	
 	
 	/* Webshop */
 
@@ -195,7 +215,20 @@
 		width:100%;
 		background:#ffbe41;
 		margin:0;
+		padding:0px;
+		display:flex;
+		flex-direction:column-reverse;
+	}
+	
+	#workshopimg {
+		width:100%;
+	}
+	
+	#workshop img {
+		object-fit: contain;
+		min-width:100%;
 		padding:0;
+		margin:0;
 	}
 	
 	/* Selectively remove parallax divs */
@@ -246,12 +279,9 @@
 		width:80%;
 		}
 		
-	main {
-		margin-bottom:20px;
-	}
-		
 	#mainbox {
-		padding-top:25px;
+		margin-top:50px;
+		padding-bottom:20px;
 	}
 		
 	#mainbox h1 {
@@ -275,23 +305,7 @@
 	#webshopgrid > article {
 		flex: 100%;
 	}
-	
-	/* Workshop */
-	
-	#workshop {
-		flex-direction:column-reverse;
-	}
-	
-	#workshopimg {
-		width:100%;
-	}
-	
-	#workshop img {
-		object-fit: contain;
-		min-width:100%;
-		padding:0;
-		margin:0;
-	}
+
 	
 	/* Breadcrumbs fix */
 	
