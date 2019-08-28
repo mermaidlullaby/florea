@@ -238,13 +238,7 @@
 		padding:0;
 		margin:0;
 	}
-	
-	/* Selectively remove parallax divs */
-	
-	#img2, #img3 {
-		display:none;
-	}
-	
+		
 	/* Footer alignment of elements */
 	
 	footer {

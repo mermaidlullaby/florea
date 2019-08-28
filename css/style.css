@@ -561,6 +561,11 @@ main {
 	list-style:none;
 }
 
+ul#sitemap {
+	margin-left:50px;
+	padding:25px;
+}
+
 /* Footer */
 
 footer {
